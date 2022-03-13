@@ -1,0 +1,10 @@
+- name: Nginx server with Certbot for SSL
+  hosts: webservers
+  become: yes
+  roles:
+    - { role: base, tags: ['base'] }
+    - { role: custom-users, tags: ['users'] }
+    - { role: security, tags: ['security'] }
+    - { role: swap, tags: ['swap'] }
+    - { role: nginx-certbot, tags: ['nginx'] }
+    - { role: nginx, tags: ['nginx'] }

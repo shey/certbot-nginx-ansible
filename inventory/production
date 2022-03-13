@@ -1,0 +1,7 @@
+staging ansible_ssh_host=159.203.12.13 ansible_ssh_user=root
+
+[webservers]
+staging
+
+[production:children]
+webservers
