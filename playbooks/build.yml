@@ -4,7 +4,7 @@
   roles:
     - { role: base, tags: ['base'] }
     - { role: custom-users, tags: ['users'] }
-    - { role: security, tags: ['security'] }
     - { role: swap, tags: ['swap'] }
     - { role: nginx-certbot, tags: ['nginx'] }
-    - { role: nginx, tags: ['nginx'] }
+    - { role: nginx-reverse-proxy, tags: ['nginx'] }
+    - { role: simple-http-server, tags: ['simple-http-server'] }

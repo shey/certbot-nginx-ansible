@@ -1,11 +1,11 @@
-- name: Install Nginx and certbot
+- name: Install Nginx
   apt:
     name: nginx
     state: latest
 
 - name: setup a directory for wellknow verification
   file:
-    path: /www/letsencrypt/.well-known/acme-challenge
+    path: /var/www/letsencrypt/.well-known/acme-challenge
     state: directory
     recurse: true
 
@@ -14,7 +14,6 @@
   template:
     src: default.j2
     dest: /etc/nginx/sites-available/default
-  tags: ['nginx', 'nginx-config', 'config']
 
 - name: restart the nginx service
   service:

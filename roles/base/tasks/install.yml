@@ -45,5 +45,5 @@
       net-tools,
       debian-keyring,
       debian-archive-keyring,
-      ntpd
+      ntp
     ]

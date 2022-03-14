@@ -1,0 +1,21 @@
+# {{ ansible_managed }}
+
+[Unit]
+Description=simple
+Requires=network-online.target
+
+[Service]
+User=shey
+Group=shey
+
+WorkingDirectory=/home/shey/content
+
+# start the simple http server
+ExecStart=/usr/bin/python3.8 -m http.server 8080
+
+
+KillMode=process
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
