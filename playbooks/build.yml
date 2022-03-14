@@ -3,6 +3,7 @@
   become: yes
   roles:
     - { role: base, tags: ['base'] }
+    - { role: sshd, tags: ['sshd'] }
     - { role: custom-users, tags: ['users'] }
     - { role: swap, tags: ['swap'] }
     - { role: nginx-certbot, tags: ['nginx'] }
